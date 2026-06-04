@@ -158,7 +158,7 @@ nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 80vh;
+    min-height: calc(100vh - 73px); /* Make hero fill the remaining screen height */
     display: flex;
     align-items: center;
     justify-content: center;
