@@ -1,0 +1,462 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --page-horizontal-padding: clamp(16px, 4vw, 50px);
+    --section-vertical-padding-large: clamp(60px, 8vw, 120px);
+    --section-vertical-padding-medium: clamp(40px, 5vw, 80px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f8fafc;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px var(--page-horizontal-padding);
+    background-color: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #0f62fe;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown Menu styling */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: rgba(255, 255, 255, 0.98);
+
+    min-width: 220px;
+    border-radius: 12px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+    padding: 8px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, visibility 0.2s;
+    z-index: 1100;
+}
+
+/* Hover state: show the dropdown */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Invisible bridge to prevent mouse-out when moving cursor from trigger to menu */
+.dropdown::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    display: block;
+}
+
+/* Reset list items inside dropdown menu */
+.dropdown-menu li {
+    margin-left: 0 !important;
+    width: 100%;
+}
+
+/* Dropdown link styling */
+.nav-links .dropdown-menu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569;
+    text-align: left;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    margin: 2px 8px;
+}
+
+/* Dropdown link hover states */
+.nav-links .dropdown-menu a:hover {
+    background-color: rgba(15, 98, 254, 0.08);
+    color: #0f62fe;
+    padding-left: 24px;
+}
+
+/* Dropdown Arrow styles */
+.dropdown-arrow {
+    display: inline-block;
+    font-size: 8px;
+    margin-left: 6px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+    color: #94a3b8;
+}
+
+.dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+    color: #0f62fe;
+}
+
+/* Hero / Home Section */
+#home {
+    padding: var(--section-vertical-padding-large) var(--page-horizontal-padding);
+    background-image: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.45)), url('images/hospital_hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero {
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.88);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 24px;
+    padding: 50px 40px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 46px;
+    color: #0f172a;
+    margin-bottom: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #0f62fe;
+    color: #ffffff;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(15, 98, 254, 0.3);
+}
+
+.hero-btn:hover {
+    background-color: #0043ce;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(15, 98, 254, 0.4);
+}
+
+/* Doctor Section */
+#doctor {
+    padding: var(--section-vertical-padding-medium) var(--page-horizontal-padding);
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#doctor h2 {
+    font-size: 32px;
+    color: #0f172a;
+    margin-bottom: 40px;
+}
+
+.doctor-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Flip Card Base */
+.flip-card {
+    background-color: transparent;
+    width: 280px;
+    height: 360px;
+    perspective: 1000px;
+    scroll-margin-top: 100px;
+    /* Offset to prevent sticky header overlap */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 127, 80, 0.4);
+    border-radius: 1.5rem;
+    padding: 24px;
+}
+
+.flip-card-front {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    padding: 0;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.flip-card-front h3 {
+    font-size: 20px;
+    color: #0f172a;
+    margin-top: 16px;
+    margin-bottom: 4px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.flip-card-front .specialty {
+    font-size: 14px;
+    color: #0f62fe;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.doctor-img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background-color: #f1f5f9;
+    overflow: hidden;
+}
+
+.doctor-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-card-back {
+    background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+            bisque 40%, rgb(255, 185, 160) 78%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 6px;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.flip-card-back .specialty {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.card-divider {
+    width: 60%;
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 0 auto 20px auto;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    text-align: left;
+}
+
+.info-item {
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.info-item .info-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+.info-item .info-value {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Appointment Section */
+#appointment {
+    padding: var(--section-vertical-padding-medium) var(--page-horizontal-padding);
+    background-color: #f1f5f9;
+}
+
+.appointment-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.appointment-form h2 {
+    font-size: 28px;
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.appointment-form input {
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    color: #0f172a;
+}
+
+.appointment-form input:focus {
+    border-color: #0f62fe;
+}
+
+.appointment-form .button {
+    background-color: #0f62fe;
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.appointment-form .button:hover {
+    background-color: #0043ce;
+}
+
+#contact {
+    padding: var(--section-vertical-padding-medium) var(--page-horizontal-padding);
+    background-color: #ffffff;
+}
+
+.contact-details {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-details h2 {
+    font-size: 28px;
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarePoint - Modern Hospital Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Hospital</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#doctor">Doctor <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#dr-singh">Dr. Singh (Cardiology)</a></li>
+                        <li><a href="#dr-sharma">Dr. Sharma (Dermatology)</a></li>
+                        <li><a href="#dr-gupta">Dr. Gupta (Neurology)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#appointment">Appointment Booking</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="hero">
+            <h1>Welcome to Our Hospital</h1>
+            <p>We provide quality healthcare services to our patients. Guided by care and advanced medical technology,
+                our specialists are here for you 24/7. Your health, safety, and well-being are our highest priorities.
+            </p>
+        </div>
+    </section>
+    <section id="doctor">
+        <h2>Our Doctors</h2>
+        <div class="doctor-list">
+            <!-- Doctor 1: Dr. Singh -->
+            <div class="flip-card" id="dr-singh">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="doctor-img">
+                            <img src="images/dr_singh.png" alt="Dr. Singh">
+                        </div>
+                        <h3>Dr. Singh</h3>
+                        <p class="specialty">Cardiologist</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Dr. Singh</h3>
+                        <p class="specialty">Cardiologist</p>
+                        <hr class="card-divider">
+                        <div class="card-info">
+                            <div class="info-item">
+                                <span class="info-label">Experience</span>
+                                <span class="info-value">15+ Years</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Graduated From</span>
+                                <span class="info-value">AIIMS, New Delhi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor 2: Dr. Sharma -->
+            <div class="flip-card" id="dr-sharma">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="doctor-img">
+                            <img src="images/dr_sharma.png" alt="Dr. Sharma">
+                        </div>
+                        <h3>Dr. Sharma</h3>
+                        <p class="specialty">Dermatologist</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Dr. Sharma</h3>
+                        <p class="specialty">Dermatologist</p>
+                        <hr class="card-divider">
+                        <div class="card-info">
+                            <div class="info-item">
+                                <span class="info-label">Experience</span>
+                                <span class="info-value">8+ Years</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Graduated From</span>
+                                <span class="info-value">AFMC, Pune</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor 3: Dr. Gupta -->
+            <div class="flip-card" id="dr-gupta">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="doctor-img">
+                            <img src="images/dr_gupta.png" alt="Dr. Gupta">
+                        </div>
+                        <h3>Dr. Gupta</h3>
+                        <p class="specialty">Neurologist</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Dr. Gupta</h3>
+                        <p class="specialty">Neurologist</p>
+                        <hr class="card-divider">
+                        <div class="card-info">
+                            <div class="info-item">
+                                <span class="info-label">Experience</span>
+                                <span class="info-value">12+ Years</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Graduated From</span>
+                                <span class="info-value">CMC, Vellore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section id="appointment">
+        <form class="appointment-form">
+            <h2>Appointment Booking</h2>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="tel" placeholder="Phone">
+            <input type="text" placeholder="Reason">
+            <button type="submit" class="button">Book Appointment</button>
+
+        </form>
+    </section>
+    <section id="contact">
+        <div class="contact-details">
+            <h2>Contact Us</h2>
+            <div class="contact-item">
+                <span class="label">Gmail:</span>
+                <a href="mailto:info@hospital.com">info@hospital.com</a>
+            </div>
+            <div class="contact-item">
+                <span class="label">Phone:</span>
+                <a href="+91 101">+91 101</a>
+            </div>
+            <div class="contact-item">
+                <span class="label">Instagram:</span>
+                <a href="https://instagram.com/hospital">hospital</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
