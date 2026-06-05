@@ -209,40 +209,139 @@
         </div>
     </section>
     <section id="appointment">
-        <form class="appointment-form">
-            <h2>Book Appointment</h2>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="tel" placeholder="Phone" required>
-            <select name="doctor" required>
-                <option value="" disabled selected hidden>Select Doctor</option>
-                <option value="Dr. Alen">Dr. Alen (Kidney Specialist)</option>
-                <option value="Dr. Verma">Dr. Verma (ENT Specialist)</option>
-                <option value="Dr. Sharma">Dr. Sharma (Pathology Specialist)</option>
-                <option value="Dr. Mishra">Dr. Mishra (Cancer Specialist)</option>
-                <option value="Dr. Saini">Dr. Saini (General Physician)</option>
-                <option value="Dr. Asha">Dr. Asha (Brain & Spine Surgeon)</option>
-                <option value="Dr. Krishna">Dr. Krishna (Eye Specialist)</option>
-            </select>
-            <input type="text" placeholder="Reason" required>
-            <button type="submit" class="button">Book Appointment</button>
+        <div class="appointment-container">
+            <div class="appointment-info">
+                <h2>Why Choose CarePoint?</h2>
+                <p>We combine advanced medical technology with personalized care to ensure your health and comfort are
+                    prioritized at every step.</p>
 
-        </form>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <div class="card-text">
+                            <h3>Verified Specialists</h3>
+                            <p>Consult with board-certified medical professionals specialized in diverse fields.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div class="card-text">
+                            <h3>Instant Booking</h3>
+                            <p>Lock in your preferred date and time slot instantly with direct notification updates.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        <div class="card-text">
+                            <h3>24/7 Dedicated Care</h3>
+                            <p>Access our emergency helpdesk and priority patient support at any time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="appointment-form-wrapper">
+                <form class="appointment-form">
+                    <h2>Book Appointment</h2>
+                    <p class="form-subtext">Fill in your information to schedule your consultation</p>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <select name="doctor" required>
+                        <option value="">Select Doctor / Specialty</option>
+                        <option value="Dr. Alen">Dr. Alen (Kidney Specialist)</option>
+                        <option value="Dr. Verma">Dr. Verma (ENT Specialist)</option>
+                        <option value="Dr. Sharma">Dr. Sharma (Pathology Specialist)</option>
+                        <option value="Dr. Mishra">Dr. Mishra (Cancer Specialist)</option>
+                        <option value="Dr. Saini">Dr. Saini (General Physician)</option>
+                        <option value="Dr. Asha">Dr. Asha (Brain & Spine Surgeon)</option>
+                        <option value="Dr. Krishna">Dr. Krishna (Eye Specialist)</option>
+                    </select>
+                    <input type="text" placeholder="Reason for Appointment" required>
+                    <button type="submit" class="button">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
     </section>
     <section id="contact">
         <div class="contact-details">
             <h2>Contact Us</h2>
+
             <div class="contact-item">
-                <span class="label">Gmail:</span>
+                <div class="contact-meta">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <span class="label">Gmail</span>
+                </div>
                 <a href="mailto:info@hospital.com">info@hospital.com</a>
             </div>
+
             <div class="contact-item">
-                <span class="label">Phone:</span>
-                <a href="+91 101">+91 101</a>
+                <div class="contact-meta">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                    </div>
+                    <span class="label">Phone</span>
+                </div>
+                <a href="tel:+91101">+91 101</a>
             </div>
+
             <div class="contact-item">
-                <span class="label">Instagram:</span>
-                <a href="https://instagram.com/hospital">hospital</a>
+                <div class="contact-meta">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </div>
+                    <span class="label">Instagram</span>
+                </div>
+                <a href="https://instagram.com/hospital" target="_blank" rel="noopener noreferrer">hospital</a>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-meta">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <span class="label">Address</span>
+                </div>
+                <span class="address-text">123 CarePoint, Noida, Uttar Pradesh </span>
             </div>
         </div>
     </section>
