@@ -210,11 +210,21 @@
     </section>
     <section id="appointment">
         <form class="appointment-form">
-            <h2>Appointment Booking</h2>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="tel" placeholder="Phone">
-            <input type="text" placeholder="Reason">
+            <h2>Book Appointment</h2>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone" required>
+            <select name="doctor" required>
+                <option value="" disabled selected hidden>Select Doctor</option>
+                <option value="Dr. Alen">Dr. Alen (Kidney Specialist)</option>
+                <option value="Dr. Verma">Dr. Verma (ENT Specialist)</option>
+                <option value="Dr. Sharma">Dr. Sharma (Pathology Specialist)</option>
+                <option value="Dr. Mishra">Dr. Mishra (Cancer Specialist)</option>
+                <option value="Dr. Saini">Dr. Saini (General Physician)</option>
+                <option value="Dr. Asha">Dr. Asha (Brain & Spine Surgeon)</option>
+                <option value="Dr. Krishna">Dr. Krishna (Eye Specialist)</option>
+            </select>
+            <input type="text" placeholder="Reason" required>
             <button type="submit" class="button">Book Appointment</button>
 
         </form>
